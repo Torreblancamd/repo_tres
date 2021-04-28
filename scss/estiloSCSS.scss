@@ -1,0 +1,142 @@
+
+
+$animal: perro;
+$animal : delfin;
+
+h1{
+    @if $animal == perro{
+        color: red;
+        font-size: 60px;
+
+    } 
+
+    @else if $animal == delfin{
+        color: green;
+        font-size: 130px;
+    }
+
+    @else{
+        color: blue;
+        font-size: 100px;
+    }
+
+
+
+}
+
+$b: "border";
+$s: "side";
+
+
+
+//a#{$s} .#{$s}-ad{
+//   box-sizing: #{$b}-box ;
+//   #{$b}-width: 2px;
+//}
+
+
+
+
+
+//p:nth-child(1){
+//    color: red;
+//}
+
+
+
+
+
+@for $i from 1 to 6{
+
+    p:nth-child( #{$i}){
+        font-size: 20px;
+        background-color: darken(red, $i * 10%);
+    }
+
+}
+
+$colores: blue , red , green , yellow;
+
+@each $color in $colores{
+
+    .div-#{$color}{ 
+        background-color: $color;
+    }
+}
+
+
+
+
+
+$colorMalo: red;
+
+.warning{
+    color: white;
+    font-size: 40px;
+    height: 200px;
+    background-color: $colorMalo;
+}
+
+.error{
+    @extend .warning;
+    font-size: 80px;
+    background-color: darken($colorMalo, 30%);
+}
+
+.error-critico{
+    @extend .error;
+    font-size: 120px;
+    background-color: darken($colorMalo, 50%);
+
+}
+
+@mixin estiloTitulares($colorLetra , $tamaño){
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: $tamaño; 
+    color: $colorLetra;
+    background-color: lightseagreen;
+}
+
+
+h2{
+    @include estiloTitulares(blue, 60px);
+} 
+
+h3{
+    @include estiloTitulares(red, 100px);
+}
+
+
+.estiloGeneral{
+    font-size: 30px;
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 10px 0 10px;
+}
+
+
+.estiloParrafos{
+    @extend .estiloGeneral;    
+    font-size: 20px;
+    background-color: lightgrey;
+    font-weight: bold;
+}
+
+
+
+@mixin cajas($ancho, $alto , $colorFondo ){
+    width: $ancho;
+    height: $alto;
+    background-color: $colorFondo;
+
+}
+
+
+aside{
+    @include cajas( 80% , 500px , red);
+}
+
+footer{
+    @include cajas(100% ,  10vh , black);
+}

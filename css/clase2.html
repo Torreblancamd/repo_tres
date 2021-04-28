@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*NUMEROS*/
+        var edad = 20; 
+        edad = 40; 
+        edad = 100 + 30;
+        var edadDos = 100;
+
+        /*SUMA*/
+        edad = 100 + edadDos; /* edad vale 200*/
+        edad = edad + edadDos; /* edad = 200+ 100;*/
+        console.log( edad );
+
+        /* SUMA DE STRINGS*/
+        var nombre = "Pedro";
+        var nombreDos = "Luis";    
+
+
+        nombre = "Jose" + 20;
+        nombreDos = 30 + "30";
+
+        console.log( nombre );
+        console.log( nombreDos );
+
+        /*RESTA*/
+        var numeroUno;
+        var numeroDos;
+
+        numeroUno = 50;
+        numeroDos = 20;
+        console.log( numeroUno - numeroDos );
+
+
+        /*DIVISION*/
+        var division = 10 / 2;
+        console.log( division);
+
+
+        /*MULTIPLICACION*/
+
+        var multi = 10 * 2;
+        console.log(multi);
+
+
+        /*STRINGS*/
+        var nombreAlumnos = "Juan";
+        nombreAlumnos = "Rosa";
+        
+
+        /*BOOLEANOS*/
+        var verdadero = true;
+        var falso = false;
+
+        
+        console.log( nombreAlumnos.length );
+
+        /*EJERCIO 1*/
+        /*CREAR DOS VARIABLES: UNA NUMERICA SU EDAD Y OTRAS DE TEXTO/STRING CON SU NOMBRE*/
+        var miEdad = 66;
+        var miNombre = "Jose";
+        
+        console.log("Mi edad es: "+ miEdad +"  "+"y mi nombre es: "+ miNombre);
+
+        /*EJERCIO 2*/
+        var resultadoSuma = 20 + 30;
+        var resultadoResta = 30 -10;
+        var resultadoMulti = 40 * 20;
+        var resultadoDivi = 50 / 2; 
+
+
+        /*EJERCICIO 3: PEDIRLE AL USUARIO QUE INGRESE POR TECLADO SU EDAD Y GUARDAR EN VARIABLE*/
+        var nombreUsuario =  prompt("Ingresa tu nombre"); 
+        var edadUsuario = prompt("Ingrese su edad");
+
+        console.log("EL USUARIO SE LLAMA: "+nombreUsuario);
+        console.log("LA EDAD DEL USUARIO ES : " + edadUsuario);
+
+      
+
+
+        /*EJERCICIO 4: INFORMAR AL USUARIO QUE EDAD TENIA EN 2010 Y QUE EDAD TENDRA EN 2031*/
+        var resultadoFuturo = parseInt(edadUsuario) + 10 ; 
+        console.log("EN EL 2031 TENDRIAS: " + resultadoFuturo );
+
+        /* EJERCICIO 5: POTENCIA AL CUADRADO*/
+        var numeroIngrese = prompt("Ingrese un numero y se multiplicare");
+
+        console.log("Su numero es: " + numeroIngrese * numeroIngrese)
+
+
+
+
+
+    </script>
+
+    <script src="js/clase2.js"></script>
+</body>
+</html>
